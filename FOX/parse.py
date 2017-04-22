@@ -1,9 +1,10 @@
-'''
-Code to convert all the captions in the form of structured data.
-The structured data will be used for labelling and running text classifiers
-Input- allcaps2.srt
-Output- a csv file
-'''
+##########################################################
+# Code to convert all the captions in the form of structured data.
+# The structured data will be used for labelling and running text classifiers
+# Input- allcaps_final.srt
+# Output- a csv file
+##########################################################
+
 from collections import OrderedDict
 import csv
 import re
@@ -48,5 +49,5 @@ def main(input_filename, output_filename):
        write_stats(stats, output_file)
 
 if __name__ == '__main__':
-    main(r'allcaps2.srt',
+    main(r'allcaps_final.srt',
          r'ParsedOutput.csv')
