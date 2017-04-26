@@ -7,6 +7,7 @@ from sklearn import metrics
 from sklearn.model_selection import cross_val_score, KFold
 from sklearn.pipeline import Pipeline
 from sklearn.linear_model import SGDClassifier
+from sklearn.naive_bayes import BernoulliNB
 
 def read_data():
     data =  pd.read_csv('test.csv')
@@ -35,6 +36,8 @@ def classify(X,y):
     # Choose the classifier
     #    clf1 = MuAltinomialNB()
     clf1 = SGDClassifier()
+    #clf1 = BernoulliNB(binarize=0.0)
+
 
 
     # Training accuracy
